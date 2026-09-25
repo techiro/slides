@@ -1,6 +1,6 @@
 ---
 marp: true
-theme: techiro
+theme: techiro-light
 title: techiro のスライド
 author: techiro
 ---

@@ -1,7 +1,7 @@
 ---
 marp: true
 paginate: true
-theme: techiro
+theme: techiro-light
 title: サンプルスライド
 author: techiro
 ---
@@ -12,7 +12,7 @@ Markdown でスライドを作成します。
 
 ---
 
-## 使い方
+# 使い方
 
 - `pnpm new:slide` で新しい資料を作る
 - `pnpm dev` でプレビューする

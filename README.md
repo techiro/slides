@@ -19,6 +19,12 @@ pnpm build
 
 生成物は `dist/` に出力されます。Cloudflare Workers の静的アセットとして公開する場合は、Cloudflare のアカウントで `pnpm cf:deploy` を実行します。
 
+## テーマ
+
+新しい資料は `techiro-light` を使います。ダークにしたい資料は frontmatter の `theme:` を `techiro-dark` に変更してください。
+
+中扉は `<!-- _class: crosshead -->` をスライドの先頭に置きます。見出しの Montserrat、本文の Work Sans、日本語の Noto Sans JP、コードの Source Code Pro を使う場合はローカルにフォントを入れてください（未導入なら代替フォントで表示されます）。
+
 ## 参照
 
 - [元リポジトリ](https://github.com/su8ru/slides)

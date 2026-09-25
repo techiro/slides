@@ -1,0 +1,500 @@
+/* @theme techiro-light */
+
+@import 'default';
+
+/* ===================================================
+   techiro Light Theme
+   Azusa 3（PowerPoint テンプレート）のトークンを踏襲した白地ライトテーマ
+   背景 #FCFDF2・文字は黒(#191A1C)だけ。アクセント 緑#19AF77 / 青#5D6CEC / ピンク#F82C7B は
+   文字色には使わず、帯の塗り・強調のハイライト・コードの色分けにだけ使う
+   =================================================== */
+
+/* ===== ベーススタイル ===== */
+section {
+  background: #FCFDF2;
+  color: #191A1C;
+  /* 本文は Work Sans。未導入環境では Noto Sans JP → ヒラギノ角ゴへフォールバックする */
+  font-family: 'Work Sans', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 24pt;
+  padding: 2.5rem 3rem;
+  align-content: start;
+  /* コンテンツを上揃え */
+}
+
+/* ===== 見出し ===== */
+/* 見出しは Montserrat。未導入環境では Noto Sans JP → ヒラギノ角ゴへフォールバックする */
+h1 {
+  color: #191A1C;
+  font-family: 'Montserrat', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
+  font-weight: 700;
+  font-size: 36pt;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  color: #191A1C;
+  font-family: 'Montserrat', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
+  font-weight: 700;
+  font-size: 28pt;
+}
+
+h3 {
+  color: #191A1C;
+  font-family: 'Montserrat', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
+  font-weight: 700;
+  font-size: 26pt;
+}
+
+/* ===== 本文 ===== */
+p, li {
+  color: #191A1C;
+  font-size: 26pt;
+  line-height: 1.6;
+}
+
+/* 強調は文字色を変えず、ピンクの半透明ハイライトで背景側から目立たせる */
+strong {
+  color: inherit !important;
+  background: rgba(248, 44, 123, .16);
+  padding: 0.05em 0.5em;
+  border-radius: 4px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+em {
+  color: inherit;
+}
+
+a {
+  color: #191A1C;
+  text-decoration: underline;
+}
+
+/* ===== リスト ===== */
+ul, ol {
+  margin-left: 0.5em;
+}
+
+ul li::marker {
+  color: #191A1C;
+}
+
+ol li::marker {
+  color: #191A1C;
+}
+
+/* ===== コードブロック ===== */
+code {
+  background-color: #EEEDDC;
+  color: #191A1C;
+  border-radius: 4px;
+  padding: 0.1em 0.3em;
+  font-family: 'Source Code Pro', ui-monospace, Menlo, 'Noto Sans JP', monospace;
+}
+
+pre {
+  background-color: #EEEDDC !important;
+  /* 背景 #FCFDF2 とパネル #EEEDDC は輝度差16で check-dark-margins/gaps の閾値(40)未満のため、
+     2px の枠線で差分を作り検査ツールに「箱」として見えるようにする。この枠線は消さないこと */
+  border: 2px solid #C9C7B4;
+  border-radius: 10px;
+  box-shadow: none;
+}
+
+pre code {
+  color: #191A1C;
+  background-color: transparent;
+  font-family: 'Source Code Pro', ui-monospace, Menlo, 'Noto Sans JP', monospace;
+}
+
+/* シンタックスハイライト（#EEEDDC地用） */
+pre .hljs-keyword,
+pre .hljs-selector-tag { color: #F82C7B; }
+
+pre .hljs-string,
+pre .hljs-attr { color: #19AF77; }
+
+pre .hljs-comment,
+pre .hljs-quote { color: #8A887B; font-style: italic; }
+
+pre .hljs-title,
+pre .hljs-title.function_ { color: #5D6CEC; }
+
+pre .hljs-number,
+pre .hljs-literal { color: #5D6CEC; }
+
+pre .hljs-built_in,
+pre .hljs-type { color: #19AF77; }
+
+pre .hljs-params { color: #191A1C; }
+
+pre .hljs-meta { color: #F82C7B; }
+
+/* ===== テーブル ===== */
+/* 地は塗らず、罫だけで組む */
+table {
+  display: table !important;
+  border-collapse: collapse !important;
+  background: transparent !important;
+  border: none !important;
+  width: 100%;
+}
+
+table thead, table tbody, table tr {
+  background: transparent !important;
+  border: none !important;
+}
+
+th {
+  background: transparent !important;
+  color: #191A1C;
+  font-weight: 700;
+  padding: 0.5em 1em;
+  text-align: left;
+  border: none !important;
+  border-bottom: 2px solid #C9C7B4 !important;
+}
+
+td {
+  background: transparent !important;
+  color: #191A1C;
+  padding: 0.5em 1em;
+  border: none !important;
+  border-bottom: 1px solid #D9D7C4 !important;
+}
+
+/* ===== 引用 ===== */
+blockquote {
+  border-left: 4px solid #19AF77;
+  padding: 10px 20px;
+  background-color: #EEEDDC;
+  color: #4A4B45;
+  font-style: italic;
+  margin: 1em 0;
+}
+
+/* ===== 水平線 ===== */
+hr {
+  border: none;
+  border-top: 1px solid #D9D7C4;
+}
+
+/* ===== ページ番号 ===== */
+section::after {
+  color: #8A887B;
+  font-size: 14pt;
+}
+
+/* ===== ヘッダー / フッター ===== */
+header {
+  color: #8A887B;
+  font-size: 0.5em;
+}
+
+footer {
+  color: #8A887B;
+  font-size: 0.5em;
+}
+
+/* ======================================================
+   レイアウトクラス
+   ====================================================== */
+
+/* ---------------------------------------------------
+   top: タイトルスライド
+   タイトルは中央、下1/3に緑の帯 + 白文字で所属・名前
+   --------------------------------------------------- */
+section.top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  align-content: center;
+  position: relative;
+  background: linear-gradient(to bottom, #FCFDF2 60%, #19AF77 60%);
+}
+
+section.top::before {
+  display: none;
+}
+
+section.top h1 {
+  border-bottom: none;
+  font-size: 52pt;
+  font-weight: 800;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 1;
+  color: #191A1C;
+}
+
+section.top p {
+  /* 緑帯(#19AF77)に白文字は明度比2.83で大サイズ太字ぎりぎり。
+     会場で薄く感じる場合は color:#191A1C（比6.2）か、帯の色を #128F61 に変える */
+  color: #FCFDF2 !important;
+  font-size: 40pt;
+  font-weight: bold;
+  margin: 0 !important;
+  padding: 0 3rem;
+  z-index: 1;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+section.top::after {
+  display: none;
+}
+
+/* ---------------------------------------------------
+   crosshead: 仕切りスライド
+   背景色 + 上下中央揃え + 濃色文字
+   問いかけやセクション区切りに使用
+   --------------------------------------------------- */
+section.crosshead {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  align-content: center;
+}
+
+section.crosshead h1 {
+  color: #191A1C;
+  border-bottom: none;
+  font-size: 44pt;
+}
+
+section.crosshead::after {
+  display: none;
+}
+
+/* ---------------------------------------------------
+   image-full: タイトル + 大きな画像
+   --------------------------------------------------- */
+section.image-full {
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+section.image-full h1 {
+  font-size: 36pt;
+  margin-bottom: 0.2em;
+  padding-bottom: 0.1em;
+}
+
+section.image-full p {
+  text-align: center;
+  margin: 0;
+}
+
+section.image-full img {
+  display: block;
+  margin: 0 auto;
+  max-height: 480px;
+  object-fit: contain;
+}
+
+/* ---------------------------------------------------
+   split: 左テキスト60% + 右画像40%
+   Marp組み込みの bg right:40% と組み合わせて使用
+
+   使い方:
+   <!-- _class: split -->
+   # タイトル
+   テキスト説明...
+   ![bg right:40% contain](./image.png)
+   --------------------------------------------------- */
+section.split h1 {
+  font-size: 36pt;
+}
+
+section.split p, section.split li {
+  font-size: 26pt;
+}
+
+/* ======================================================
+   Google Slides 標準12レイアウト対応
+   Azusa 3 の実テンプレート（slideLayouts）の配置比率を踏襲する。
+   「タイトル スライド」= top、「セクション ヘッダー」= crosshead、
+   「タイトルと本文」= クラス指定なしの既定スタイル、
+   「Light - Blank」= blank クラスのまま、このテーマ（techiro-light）を使う。
+   残り8種をここに定義する。
+   ====================================================== */
+
+/* ---------------------------------------------------
+   kicker: 見出しの上に置く小さなラベル行
+   main-point / section-title-description の「サブタイトル」枠に使う
+   --------------------------------------------------- */
+.kicker {
+  font-family: 'Work Sans', 'Noto Sans JP', sans-serif;
+  font-size: 17pt;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #8A887B;
+  margin: 0 0 0.3em;
+}
+
+/* ---------------------------------------------------
+   title-only: 見出しだけの自由なキャンバス
+   Google Slides "TITLE_ONLY" 相当
+   --------------------------------------------------- */
+section.title-only h1 {
+  font-size: 40pt;
+}
+
+/* ---------------------------------------------------
+   two-col: タイトル + 本文2カラム
+   Google Slides "TITLE_AND_TWO_COLUMNS" 相当
+
+   使い方:
+   <!-- _class: two-col -->
+   # タイトル
+   <div class="col2">
+   <div>
+
+   左カラムの本文
+
+   </div>
+   <div>
+
+   右カラムの本文
+
+   </div>
+   </div>
+   --------------------------------------------------- */
+section.two-col .col2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.6rem;
+  margin-top: 0.3em;
+}
+
+section.two-col .col2 > div > :first-child {
+  margin-top: 0;
+}
+
+/* ---------------------------------------------------
+   one-column-text: 見出し+本文を右側の1カラムに寄せる
+   左側は ![bg left:55%](image) 用に空けておく
+   Google Slides "ONE_COLUMN_TEXT" 相当
+   --------------------------------------------------- */
+section.one-column-text h1 {
+  font-size: 30pt;
+  margin-bottom: 1em;
+}
+
+/* ---------------------------------------------------
+   main-point: 小さなキッカー + 大きな1メッセージ
+   Google Slides "MAIN_POINT" 相当
+
+   使い方:
+   <!-- _class: main-point -->
+   <p class="kicker">キッカー</p>
+
+   # 大きな一言
+   --------------------------------------------------- */
+section.main-point {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section.main-point h1 {
+  font-size: 48pt;
+  line-height: 1.25;
+  margin-bottom: 0;
+}
+
+/* ---------------------------------------------------
+   section-title-description: 左にキッカー+見出し、右に説明文
+   Google Slides "SECTION_TITLE_AND_DESCRIPTION" 相当
+
+   使い方:
+   <!-- _class: section-title-description -->
+   <div class="std-grid">
+   <div>
+
+   <p class="kicker">キッカー</p>
+
+   # 見出し
+
+   </div>
+   <div>
+
+   説明文をここに書く。
+
+   </div>
+   </div>
+   --------------------------------------------------- */
+section.section-title-description .std-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.6rem;
+  align-items: start;
+}
+
+section.section-title-description h1 {
+  font-size: 32pt;
+}
+
+/* ---------------------------------------------------
+   caption-only: 下端の説明文だけ。上は背景画像などに使う
+   Google Slides "CAPTION_ONLY" 相当
+
+   使い方:
+   <!-- _class: caption-only -->
+   ![bg](./image.png)
+   説明文を一行だけ
+   --------------------------------------------------- */
+section.caption-only {
+  position: relative;
+}
+
+section.caption-only p {
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  bottom: 9%;
+  margin: 0;
+  text-align: center;
+  font-size: 20pt;
+  background: rgba(252, 253, 242, 0.82);
+  padding: 0.5em 1em;
+  border-radius: 8px;
+}
+
+/* ---------------------------------------------------
+   big-number: 大きな数字 + 短い説明
+   Google Slides "BIG_NUMBER" 相当
+
+   使い方:
+   <!-- _class: big-number -->
+   # 88%
+   検査を自動化できた割合
+   --------------------------------------------------- */
+section.big-number {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+section.big-number h1 {
+  font-size: 96pt;
+  margin-bottom: 0.15em;
+}
+
+section.big-number p {
+  font-size: 22pt;
+  color: #8A887B;
+}
+
+/* ---------------------------------------------------
+   blank: まっさらな1枚。背景画像や自由配置の要素に使う
+   Google Slides "BLANK" 相当
+   --------------------------------------------------- */
+section.blank {
+  padding: 0;
+}
