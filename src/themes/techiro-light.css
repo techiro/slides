@@ -203,14 +203,14 @@ footer {
 
 /* ---------------------------------------------------
    top: タイトルスライド
-   タイトルは中央、下1/3に緑の帯 + 白文字で所属・名前
+   タイトルは中央、下1/3に緑の帯 + 濃色文字でサブタイトル
    --------------------------------------------------- */
 section.top {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: 60% 40%;
+  padding: 0;
   text-align: center;
-  align-content: center;
   position: relative;
   background: linear-gradient(to bottom, #FCFDF2 60%, #19AF77 60%);
 }
@@ -223,20 +223,24 @@ section.top h1 {
   border-bottom: none;
   font-size: 52pt;
   font-weight: 800;
-  margin-bottom: 0;
+  margin: 0;
+  padding: 0 3rem;
+  align-self: center;
+  justify-self: center;
   position: relative;
   z-index: 1;
   color: #191A1C;
 }
 
 section.top p {
-  /* 緑帯(#19AF77)に白文字は明度比2.83で大サイズ太字ぎりぎり。
-     会場で薄く感じる場合は color:#191A1C（比6.2）か、帯の色を #128F61 に変える */
-  color: #FCFDF2 !important;
+  color: #191A1C !important;
   font-size: 40pt;
   font-weight: bold;
   margin: 0 !important;
+  width: 100%;
   padding: 0 3rem;
+  align-self: center;
+  justify-self: center;
   z-index: 1;
   text-align: center;
   box-sizing: border-box;

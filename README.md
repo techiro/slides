@@ -23,7 +23,7 @@ pnpm build
 
 新しい資料は `techiro-light` を使います。ダークにしたい資料は frontmatter の `theme:` を `techiro-dark` に変更してください。
 
-中扉は `<!-- _class: crosshead -->` をスライドの先頭に置きます。見出しの Montserrat、本文の Work Sans、日本語の Noto Sans JP、コードの Source Code Pro を使う場合はローカルにフォントを入れてください（未導入なら代替フォントで表示されます）。
+表紙は `<!-- _class: top -->` を指定し、`# タイトル` の次の段落にサブタイトルを書きます。中扉は `<!-- _class: crosshead -->` を指定します。見出しの Montserrat、本文の Work Sans、日本語の Noto Sans JP、コードの Source Code Pro を使う場合はローカルにフォントを入れてください（未導入なら代替フォントで表示されます）。
 
 ## 参照
 

@@ -6,9 +6,12 @@ title: サンプルスライド
 author: techiro
 ---
 
+<!-- _class: top -->
+<!-- _paginate: false -->
+
 # サンプルスライド
 
-Markdown でスライドを作成します。
+Marp でスライドを作る
 
 ---
 
